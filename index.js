@@ -4,7 +4,8 @@ var log = console.log;
 
 var score = 0;
 
-var userName = readlineSync.question("What Is Your Name? ");
+var userName = readlineSync.question(chalk.blue.bold("What is your Name? "));
+
 log("________________________________________");
 log(chalk`Welcome {green ${userName}} To The  Ultimate GIT Quiz`);
 log(`Lets See How Much You Know About GIT`)
@@ -81,6 +82,6 @@ for (var i = 0; i < highScores.length; i++) {
   var currentPlayer = highScores[i];
   if (currentPlayer.score < score) {
     log(chalk.bold.bgBlackBright.whiteBright(`You have beaten ${currentPlayer.name}'s highscore`));
-    log(`send me the screenshot to win to claim your prize @rkjain119@gmail.com &`)
+    log(`send me the screenshot to win to claim your prize @rkjain119@gmail.com`)
   }
 }
